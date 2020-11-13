@@ -16,7 +16,7 @@ app.get('/api/home/:id/reviews', (req, res) => {
     db.connection.query(queryString, queryArgs, (err, response) => {
         if (err) {
             console.log(err);
-            res.sendStatus(500);r
+            res.sendStatus(500);
         } else {
             res.send(response);
         }
