@@ -1,6 +1,5 @@
 import React from 'react';
 import Review from './Review.jsx';
-import Panel from './Panel.jsx';
 
 const Reviews = (props) => {
   const rev = [];
@@ -16,25 +15,10 @@ const Reviews = (props) => {
   return (
     <div>
       {
-        rev.map((review) => (
-          <Review review={review} />
+        rev.map((review, i) => (
+          <Review review={review} key={i}/>
         ))
       }
-      <div>
-        <button type="button" onClick={seeAllReviews}>
-          See All
-          {' '}
-          {reviews.length}
-          {' '}
-          Reviews
-        </button>
-        <Panel
-          modalOpen={modalOpen}
-          seeAllReviews={props.seeAllReviews}
-          ratings={ratings}
-          reviews={reviews}
-        />
-      </div>
     </div>
   );
 };

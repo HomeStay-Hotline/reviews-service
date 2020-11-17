@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const Ratings = (props) => (
   <div>
-    <div>
+    <div className="ratingHead">
         {props.ratings[6]}
     </div>
     <div>
@@ -24,7 +24,7 @@ const Ratings = (props) => (
       {props.ratings[3]}
     </div>
     <div>
-      Check_in
+      Check in
       {' '}
       {props.ratings[4]}
       {' '}
