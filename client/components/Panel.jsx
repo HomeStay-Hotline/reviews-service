@@ -1,23 +1,53 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React, { useState } from 'react';
 import PanelRatings from './PanelRatings.jsx';
 import PanelReviews from './PanelReviews.jsx';
+import Search from './Search.jsx';
 
-const Panel = (props) => (
-  <Modal isOpen={props.modalOpen}>
-    <button onClick={props.seeAllReviews}>X</button>
+const Panel = (props) => {
+  const modal = document.getElementById('myModal');
+  const [filter, setFilter] = useState('');
+
+  function getSearch(input) {
+    setFilter(input);
+  }
+
+  return (
     <div>
-        {props.ratings[6]}
+      <button
+        id="modalBtn"
+        type="button"
+        onClick={() => {
+          modal.style.display = 'block';
+        }}
+      >
+        See All
         {' '}
-        {`(${props.reviews.length}) Reviews`}
+        {props.reviews.length}
+        {' '}
+        Reviews
+      </button>
+      <div id="myModal" className="modal">
+        <div className="modal-content">
+          <span
+            className="close"
+            onClick={() => {
+              modal.style.display = 'none';
+            }}
+          >
+            &times;
+          </span>
+          <div>
+            <PanelRatings ratings={props.ratings} totalReviews={props.reviews.length} />
+          </div>
+          <div>
+            <Search getSearch={getSearch}/>
+            <PanelReviews reviews={props.reviews} filter={filter}/>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <PanelRatings ratings={props.ratings} />
-    </div>
-    <div>
-      <PanelReviews reviews={props.reviews} />
-    </div>
-  </Modal>
-);
+
+  );
+};
 
 export default Panel;
