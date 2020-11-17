@@ -18,6 +18,7 @@ CREATE TABLE reviews (
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     listing_id int NOT NULL references listings(id),
     user varchar(255) NOT NULL,
+    url varchar(255) NOT NULL,
     review varchar(255) NOT NULL,
     review_date date,
     cleanliness DOUBLE,

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1605573725724" clover="3.2.0">
+  <project timestamp="1605573725725" name="All files">
+    <metrics statements="53" coveredstatements="24" conditionals="2" coveredconditionals="1" methods="16" coveredmethods="7" elements="71" coveredelements="32" complexity="0" loc="53" ncloc="53" packages="1" files="7" classes="7"/>
+    <file name="App.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/App.jsx">
+      <metrics statements="36" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="4"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="3" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="25" count="3" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="32" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="51" count="0" type="stmt"/>
+      <line num="52" count="0" type="stmt"/>
+      <line num="53" count="0" type="stmt"/>
+      <line num="54" count="0" type="stmt"/>
+      <line num="55" count="0" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="57" count="0" type="stmt"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="63" count="0" type="stmt"/>
+      <line num="64" count="0" type="stmt"/>
+      <line num="65" count="0" type="stmt"/>
+      <line num="68" count="0" type="stmt"/>
+      <line num="70" count="0" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="74" count="0" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
+      <line num="82" count="0" type="stmt"/>
+      <line num="83" count="0" type="stmt"/>
+      <line num="89" count="3" type="stmt"/>
+      <line num="90" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="91" count="0" type="stmt"/>
+      <line num="107" count="3" type="stmt"/>
+    </file>
+    <file name="Panel.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/Panel.jsx">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+    </file>
+    <file name="PanelRatings.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/PanelRatings.jsx">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+    </file>
+    <file name="PanelReviews.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/PanelReviews.jsx">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+    </file>
+    <file name="Ratings.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/Ratings.jsx">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+    </file>
+    <file name="Review.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/Review.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+    </file>
+    <file name="Reviews.jsx" path="/Users/stevennguyen/Documents/hackreactor/fec-capstone/reviews-service/client/components/Reviews.jsx">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="6" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="24" count="6" type="stmt"/>
+    </file>
+  </project>
+</coverage>
