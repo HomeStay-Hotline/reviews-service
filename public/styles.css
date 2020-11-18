@@ -1,5 +1,6 @@
 body {
   font-family: Montserrat;
+  align-content: center;
 }
 
 
@@ -85,7 +86,7 @@ Rating
   font-size: 22px;
   font-weight: bold;
   vertical-align: middle;
-  margin: 30px;
+  margin: 30px 30px 30px 0px;
 }
 
 .rating {
@@ -107,18 +108,30 @@ Rating
 .barObj {
     float: right;
     justify-content: flex-end;
-    background-color: black;
     width: 30%;
-    border-radius: 15px;
     height: 4px;
     align-self: center;
     margin-right: 10px;
+    border-radius: 10px;
+}
+
+.innerBar {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background: rgb(221, 221, 221);
+    border-radius: 10px;
 }
 
 .progress {
-    width: 50%;
-    background-color: white;
+    background-color: black;
+    border-radius: 10px;
     align-self: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 10%;
 }
 
 /*
@@ -129,6 +142,7 @@ Review
     margin: 25px 50px 25px 0;
     width: 40%;
     display: inline-block;
+    align-self: flex-start;
 }
 
 .reviewTop {
@@ -139,6 +153,17 @@ Review
 
 .user {
     font-weight: bold;
+}
+
+.readMore {
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /*
@@ -152,6 +177,7 @@ Panel
 
 .panelRating {
     margin: 10px 0;
+    width: 100%;
 }
 
 .sticky {
@@ -161,8 +187,8 @@ Panel
 }
 
 .flexbox-item {
-    width: 80%;
-    margin: 10px 0 10px 0;
+    width: 50%;
+    margin: 10px 0 50px 0;
     float: left;
 }
 
@@ -170,6 +196,7 @@ Panel
     float: right;
     overflow-y: auto;
     margin-top: 40px;
+    width: 95%;
 }
 
 /*

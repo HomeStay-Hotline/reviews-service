@@ -12,14 +12,7 @@ describe('Render App', () => {
   });
 
   test('should exist', () => {
-    expect(wrapper.find('.mainView').exists()).toBeTruthy();
+    expect(wrapper.find('.mainView').exists()).toBe(true);
   });
 
-  test('should render reviews', () => {
-    expect(wrapper.containsMatchingElement(<Reviews />)).toEqual(true);
-  });
-
-  test('should render ratings', () => {
-    expect(wrapper.containsMatchingElement(<Ratings />)).toEqual(true);
-  });
 });

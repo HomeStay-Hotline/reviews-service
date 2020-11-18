@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 const PanelRatings = (props) => (
   <div className="sticky">
     <div className="ratingHead">
+      <i className="fas fa-star" style={{ color: 'red' }} />
+      {' '}
       {props.ratings[6]}
       {' '}
       {`(${props.totalReviews} reviews)`}
@@ -13,7 +15,9 @@ const PanelRatings = (props) => (
           Cleanliness
         </div>
         <div className="barObj">
-          <span className="barObj" />
+          <div className="innerBar">
+            <span className="progress" style={{ width: `calc(100% * ${(props.ratings[0] / 5)})` }}> </span>
+          </div>
         </div>
         <div className="ratingNumber">
           {props.ratings[0]}
@@ -26,7 +30,9 @@ const PanelRatings = (props) => (
           Accuracy
         </div>
         <div className="barObj">
-          <span className="barObj" />
+          <div className="innerBar">
+            <span className="progress" style={{ width: `calc(100% * ${(props.ratings[1] / 5)})` }}> </span>
+          </div>
         </div>
         <div className="ratingNumber">
           {props.ratings[1]}
@@ -39,7 +45,9 @@ const PanelRatings = (props) => (
           Communication
         </div>
         <div className="barObj">
-          <span className="barObj" />
+          <div className="innerBar">
+            <span className="progress" style={{ width: `calc(100% * ${(props.ratings[2] / 5)})` }}> </span>
+          </div>
         </div>
         <div className="ratingNumber">
           {props.ratings[2]}
@@ -52,7 +60,9 @@ const PanelRatings = (props) => (
           Location
         </div>
         <div className="barObj">
-          <span className="barObj" />
+          <div className="innerBar">
+            <span className="progress" style={{ width: `calc(100% * ${(props.ratings[3] / 5)})` }}> </span>
+          </div>
         </div>
         <div className="ratingNumber">
           {props.ratings[3]}
@@ -62,10 +72,12 @@ const PanelRatings = (props) => (
     <div className="panelRating">
       <div className="bar">
         <div className="ratingType">
-          Check in
+          Check-in
         </div>
         <div className="barObj">
-          <span className="barObj" />
+          <div className="innerBar">
+            <span className="progress" style={{ width: `calc(100% * ${(props.ratings[4] / 5)})` }}> </span>
+          </div>
         </div>
         <div className="ratingNumber">
           {props.ratings[4]}
@@ -78,7 +90,9 @@ const PanelRatings = (props) => (
           Value
         </div>
         <div className="barObj">
-          <span className="barObj" />
+          <div className="innerBar">
+            <span className="progress" style={{ width: `calc(100% * ${(props.ratings[5] / 5)})` }}> </span>
+          </div>
         </div>
         <div className="ratingNumber">
           {props.ratings[5]}
