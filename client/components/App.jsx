@@ -92,7 +92,7 @@ class App extends React.Component {
       return (
         <div className="mainView">
           <div>
-            <Ratings reviews={reviews} ratings={ratings} />
+            <Ratings totalReviews={reviews.length} ratings={ratings} />
             <div>
               <Reviews
                 reviews={reviews}

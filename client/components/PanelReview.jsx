@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Review = (props) => {
+const PanelReview = (props) => {
   const date = props.review.review_date.slice(0, 10);
   const arrDate = date.split('-');
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
@@ -8,7 +8,7 @@ const Review = (props) => {
   const modifiedDate = `${months[Number(arrDate[1])]} ${arrDate[0]}`;
 
   return (
-    <div className="review">
+    <div className="panelReview">
       <div className="reviewTop">
         <div>
           <img src={props.review.url} className="avatar" key={props.key} />
@@ -28,4 +28,4 @@ const Review = (props) => {
   );
 };
 
-export default Review;
+export default PanelReview;
