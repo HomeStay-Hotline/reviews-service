@@ -1,5 +1,5 @@
 import React from 'react';
-import Review from './Review.jsx';
+import PanelReview from './PanelReview.jsx';
 
 const PanelReviews = (props) => (
   <div>
@@ -7,7 +7,7 @@ const PanelReviews = (props) => (
         props.reviews.map((review, i) => {
           if (review.review.toLowerCase().includes(props.filter.toLowerCase())) {
             return (
-              <Review review={review} key={i} />
+              <PanelReview review={review} key={i} />
             );
           }
         })

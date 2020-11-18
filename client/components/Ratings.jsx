@@ -3,34 +3,87 @@ import React, { Component } from 'react';
 const Ratings = (props) => (
   <div>
     <div className="ratingHead">
-        {props.ratings[6]}
+      {props.ratings[6]}
+      {' '}
+      {`(${props.totalReviews} reviews)`}
     </div>
-    <div>
-      Cleanliness
-      {' '}
-      {props.ratings[0]}
-      {' '}
-      Accuracy
-      {' '}
-      {props.ratings[1]}
+    <div className="rating">
+      <div className="bar">
+        <div className="ratingType">
+          Cleanliness
+        </div>
+        <div className="barObj">
+          <div className="progress" />
+        </div>
+        <div className="ratingNumber">
+          {props.ratings[0]}
+        </div>
+      </div>
     </div>
-    <div>
-      Communication
-      {' '}
-      {props.ratings[2]}
-      {' '}
-      Location
-      {' '}
-      {props.ratings[3]}
+    <div className="rating">
+      <div className="bar">
+        <div className="ratingType">
+          Accuracy
+        </div>
+        <div className="barObj">
+          <span className="barObj" />
+        </div>
+        <div className="ratingNumber">
+          {props.ratings[1]}
+        </div>
+      </div>
     </div>
-    <div>
-      Check in
-      {' '}
-      {props.ratings[4]}
-      {' '}
-      Value
-      {' '}
-      {props.ratings[5]}
+    <div className="rating">
+      <div className="bar">
+        <div className="ratingType">
+          Communication
+        </div>
+        <div className="barObj">
+          <span className="barObj" />
+        </div>
+        <div className="ratingNumber">
+          {props.ratings[2]}
+        </div>
+      </div>
+    </div>
+    <div className="rating">
+      <div className="bar">
+        <div className="ratingType">
+          Location
+        </div>
+        <div className="barObj">
+          <span className="barObj" />
+        </div>
+        <div className="ratingNumber">
+          {props.ratings[3]}
+        </div>
+      </div>
+    </div>
+    <div className="rating">
+      <div className="bar">
+        <div className="ratingType">
+          Check in
+        </div>
+        <div className="barObj">
+          <span className="barObj" />
+        </div>
+        <div className="ratingNumber">
+          {props.ratings[4]}
+        </div>
+      </div>
+    </div>
+    <div className="rating">
+      <div className="bar">
+        <div className="ratingType">
+          Value
+        </div>
+        <div className="barObj">
+          <span className="barObj" />
+        </div>
+        <div className="ratingNumber">
+          {props.ratings[5]}
+        </div>
+      </div>
     </div>
   </div>
 );

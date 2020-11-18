@@ -9,8 +9,15 @@ const Search = (props) => {
   }
 
   return (
-    <div>
-      <input type="text" placeholder="Search Reviews" value={value} onChange={(e) => { handleInput(e.target.value); }} />
+    <div className="container">
+      <input
+        id="search"
+        type="text"
+        className="round"
+        placeholder="Search Reviews"
+        value={value}
+        onChange={(e) => { handleInput(e.target.value); }}
+      />
     </div>
   );
 };
