@@ -9,7 +9,9 @@ const Search = (props) => {
   }
 
   return (
+
     <div className="container">
+      <i className="fas fa-search" />
       <input
         id="search"
         type="text"
@@ -19,6 +21,7 @@ const Search = (props) => {
         onChange={(e) => { handleInput(e.target.value); }}
       />
     </div>
+
   );
 };
 

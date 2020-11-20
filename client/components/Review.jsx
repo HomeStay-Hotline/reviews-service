@@ -25,7 +25,7 @@ const Review = (props) => {
             <div className="user">
               {props.review.user}
             </div>
-            <div>
+            <div className="date">
               {modifiedDate}
             </div>
           </div>
@@ -45,7 +45,7 @@ const Review = (props) => {
           <div className="user">
             {props.review.user}
           </div>
-          <div>
+          <div className="date">
             {modifiedDate}
           </div>
         </div>

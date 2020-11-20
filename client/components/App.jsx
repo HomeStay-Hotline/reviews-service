@@ -9,11 +9,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       reviews: [],
-      modalOpen: false,
       ratings: [],
     };
     this.getReviews = this.getReviews.bind(this);
-    this.seeAllReviews = this.seeAllReviews.bind(this);
     this.getRatings = this.getRatings.bind(this);
   }
 
@@ -79,12 +77,6 @@ class App extends React.Component {
     });
   }
 
-  seeAllReviews() {
-    const { modalOpen } = this.state;
-    this.setState({
-      modalOpen: !modalOpen,
-    });
-  }
 
   render() {
     const { reviews, modalOpen, ratings } = this.state;
@@ -96,8 +88,6 @@ class App extends React.Component {
             <div>
               <Reviews
                 reviews={reviews}
-                seeAllReviews={this.seeAllReviews}
-                modalOpen={modalOpen}
                 ratings={ratings}
               />
             </div>

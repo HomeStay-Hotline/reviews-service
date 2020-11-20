@@ -1,13 +1,17 @@
 const faker = require('faker');
 const db = require('./server/database/index.js');
 
+const s3URL = 'https://fec-images-steven.s3-us-west-2.amazonaws.com/images/';
+
 // creates each individual review
 const getReviews = (foreignId, callback) => {
-  for (let i = 0; i < 100; i++) {
+  const getRandomReviewAmount = Math.floor(Math.random() * 70) + 30;
+  for (let i = 0; i < getRandomReviewAmount; i++) {
     const obj = {};
     const getRandomReview = () => ((Math.random() * 5).toFixed(1));
+    const paddedNumber = i.toString().padStart(3, '0');
     obj.user = faker.name.firstName();
-    obj.url = faker.image.avatar();
+    obj.url = `${s3URL}${paddedNumber}.jpg`;
     obj.review = faker.lorem.paragraph();
     obj.review_date = faker.date.recent();
     obj.cleanliness = getRandomReview();

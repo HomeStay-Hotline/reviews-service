@@ -21,8 +21,9 @@ body {
 
 img {
     border-radius: 50%;
-    width: 80%;
+    width: 100%;
     height: 100%;
+    margin-right: 20px;
 }
 
 /*
@@ -43,6 +44,7 @@ Modal
 }
    /* Modal Content/Box */
 .modal-content {
+    bottom: 0;
      background-color: #FEFEFE;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -50,6 +52,7 @@ Modal
     width: 80%; /* Could be more or less, depending on screen size */
     display: flex;
     overflow-y: initial;
+    border-radius: 20px;
 }
 
 .seeAll {
@@ -60,6 +63,18 @@ Modal
     width: 200px;
     margin-bottom: 30px;
     border-radius: 15px;
+}
+
+.seeAll:focus {
+    outline: none;
+}
+
+.seeAll:hover {
+    background-color: lightgray;
+}
+
+.seeAll:active {
+    transform: scale(.9);
 }
 
    /* The Close Button */
@@ -155,6 +170,10 @@ Review
     font-weight: bold;
 }
 
+.date {
+    color: gray;
+}
+
 .readMore {
     background-color: white;
     border: none;
@@ -195,7 +214,7 @@ Panel
 .flexbox-item-2 {
     float: right;
     overflow-y: auto;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 95%;
 }
 
@@ -204,19 +223,41 @@ Search
 */
 
 .container {
+    box-sizing: border-box;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
-    height: 50px;
+    width: 85%;
+    height: 100px;
+    border-radius: 100px;
+    height: unset;
+    align-content: center;
+    border: 1px solid gray;
 }
 
-input[type="text"] {
+
+/* input[type="text"] {
     position: absolute;
     width: 40%;
+} */
+
+.fa-search {
+    margin: 10px 5px 10px 5px;
+    color: lightgray;
+    align-content: center;
 }
 
 .round {
-    border-radius: 20px;
-    height: 6%;
+    border: none;
+    padding: 0px;
+    justify-content: flex-end;
+    width: 90%;
+    cursor: text;
+    margin: 10px;
+}
+
+.round:focus {
+    outline: none;
+}
+
+.round:required > .container {
+    border: 1px solid black;
 }
