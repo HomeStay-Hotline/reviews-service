@@ -4,19 +4,18 @@ import Review from './Review.jsx';
 const Reviews = (props) => {
   const rev = [];
   const {
-    reviews, modalOpen, ratings, seeAllReviews,
+    reviews,
   } = props;
 
   for (let i = 0; i < 6; i++) {
     rev.push(reviews[i]);
   }
 
-
   return (
     <div>
       {
         rev.map((review, i) => (
-          <Review review={review} key={i}/>
+          <Review review={review} key={i} />
         ))
       }
     </div>

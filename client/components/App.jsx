@@ -20,8 +20,8 @@ class App extends React.Component {
   }
 
   getReviews() {
-    const id = Math.floor(Math.random() * 10) + 1;
-    axios.get(`/api/home/${id}/reviews`)
+    const win = window.location.pathname.split('/')[1];
+    axios.get(`/api/homes/${win}/reviews`)
       .then((response) => {
         this.setState({
           reviews: response.data,
@@ -79,7 +79,7 @@ class App extends React.Component {
 
 
   render() {
-    const { reviews, modalOpen, ratings } = this.state;
+    const { reviews, ratings } = this.state;
     if (reviews.length !== 0) {
       return (
         <div className="mainView">
