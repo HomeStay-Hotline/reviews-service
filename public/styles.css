@@ -44,15 +44,23 @@ Modal
 }
    /* Modal Content/Box */
 .modal-content {
+    position: relative;
     bottom: 0;
-     background-color: #FEFEFE;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #FEFEFE;
+    margin: auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     display: flex;
     overflow-y: initial;
     border-radius: 20px;
+    animation-name: animateUp;
+    animation-duration: 0.4s
+}
+
+@keyframes animateUp {
+    from {top: 300px; opacity: 0}
+    to {top: 0; opacity: 1}
 }
 
 .seeAll {
