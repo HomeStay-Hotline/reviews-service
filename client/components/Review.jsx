@@ -19,7 +19,7 @@ const Review = (props) => {
       <div className="review">
         <div className="reviewTop">
           <div>
-            <img src={props.review.url} className="avatar" key={props.key} />
+            <img src={props.review.url} className="avatar" key={props.key} loading="lazy" />
           </div>
           <div>
             <div className="user">
