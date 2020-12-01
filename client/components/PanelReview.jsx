@@ -5,7 +5,7 @@ const PanelReview = (props) => {
   const arrDate = date.split('-');
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August', 'September', 'October', 'November', 'December'];
-  const modifiedDate = `${months[Number(arrDate[1])]} ${arrDate[0]}`;
+  const modifiedDate = `${months[Number(arrDate[1]) - 1]} ${arrDate[0]}`;
 
   return (
     <div className="panelReview">
