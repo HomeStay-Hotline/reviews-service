@@ -39,7 +39,7 @@ const getReviews = (foreignId, callback) => {
 
 // creates each listing
 const getListings = () => {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 100; i++) {
     const queryString = 'INSERT INTO listings (cleanliness, communication, check_in, accuracy, location, value) VALUES (0.0, 0.0, 0.0, 0.0, 0.0, 0.0)';
     db.connection.query(queryString, (err, result) => {
       if (err) {
