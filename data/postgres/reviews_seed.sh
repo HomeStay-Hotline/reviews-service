@@ -1,0 +1,1 @@
+psql -U 'yingguo' -d 'reviews' -c "COPY reviews (listing_id,customer_id,review,review_date,cleanliness,communication,check_in,accuracy,location_review,value_review) FROM '/Users/yingguo/gitroot/system-design/reviews-service/data/reviews.csv' DELIMITER ',' CSV HEADER";

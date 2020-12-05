@@ -1,0 +1,1 @@
+arangoimport --file "/Users/yingguo/gitroot/system-design/reviews-service/data/sample_reviews.csv" --type csv --collection "sample_reviews"

@@ -67,9 +67,8 @@ app.put('/api/homes/:id/reviews', (req, res) => {
 
 // Delete / DELETE - delete a review
 app.delete('/api/homes/:id/reviews', (req, res) => {
-  const { id } = req.params;
-  const queryString = 'DELETE FROM reviews WHERE reviews.listing_id = ?';
-  const queryArgs = [id];
+  const queryString = 'DELETE FROM reviews WHERE reviews.id = ?';
+  const queryArgs = req.body.id;
   db.connection.query(queryString, queryArgs, (err, response) => {
     if (err) {
       console.log(err);
