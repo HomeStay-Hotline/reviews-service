@@ -23,6 +23,7 @@ class App extends React.Component {
     const win = window.location.pathname.split('/')[1];
     axios.get(`/api/homes/${win}/reviews`)
       .then((response) => {
+        console.log('response', response);
         this.setState({
           reviews: response.data,
         });
@@ -48,12 +49,12 @@ class App extends React.Component {
     };
 
     for (let i = 0; i < reviews.length; i++) {
-      tracker.cleanliness += reviews[i].cleanliness;
-      tracker.communication += reviews[i].communication;
-      tracker.check_in += reviews[i].check_in;
-      tracker.accuracy += reviews[i].accuracy;
-      tracker.location += reviews[i].location;
-      tracker.value += reviews[i].value;
+      tracker.cleanliness += Number(reviews[i].cleanliness);
+      tracker.communication += Number(reviews[i].communication);
+      tracker.check_in += Number(reviews[i].check_in);
+      tracker.accuracy += Number(reviews[i].accuracy);
+      tracker.location += Number(reviews[i].location_review);
+      tracker.value += Number(reviews[i].value_review);
     }
 
     const ratings = [];
