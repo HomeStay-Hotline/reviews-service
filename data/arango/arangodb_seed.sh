@@ -1,1 +1,1 @@
-arangoimport --file "/Users/yingguo/gitroot/system-design/reviews-service/data/sample_reviews.csv" --type csv --collection "sample_reviews"
+arangoimport --file "/Users/yingguo/gitroot/system-design/reviews-service/data/arango/arango_reviews.csv" --type csv --server.database "airBnBReviews" --collection "reviews" --translate "review_id=_key"
