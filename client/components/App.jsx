@@ -60,7 +60,7 @@ class App extends React.Component {
     const ratings = [];
 
     for (const key in tracker) {
-      tracker[key] /= 100;
+      tracker[key] /= reviews.length;
       tracker[key] = tracker[key].toFixed(1);
       ratings.push(tracker[key]);
     }

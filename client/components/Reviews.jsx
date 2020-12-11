@@ -6,8 +6,11 @@ const Reviews = (props) => {
   const {
     reviews,
   } = props;
-
-  for (let i = 0; i < 6; i++) {
+  let num_of_reviews = 6;
+  if (reviews.length < num_of_reviews) {
+    num_of_reviews = reviews.length;
+  }
+  for (let i = 0; i < num_of_reviews; i++) {
     rev.push(reviews[i]);
   }
 

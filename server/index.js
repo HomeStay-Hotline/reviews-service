@@ -25,16 +25,6 @@ app.get('/api/homes/:id/reviews', (req, res) => {
     .catch((err) => {
       res.send(err);
     })
-  // const queryString = 'SELECT * FROM reviews WHERE reviews.listing_id = ?';
-  // const queryArgs = [id];
-  // db.connection.query(queryString, queryArgs, (err, response) => {
-  //   if (err) {
-  //     console.log(err);
-  //     res.sendStatus(500);
-  //   } else {
-  //     res.send(response);
-  //   }
-  // });
 });
 
 // // Create / POST - create a new review with an existing user
