@@ -30,7 +30,7 @@ const Review = sequelize.define('reviews', {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    reivew: {
+    review: {
         type: DataTypes.TEXT,
         allowNull: false,
     },

@@ -16,7 +16,7 @@ const PanelReview = (props) => {
         </div>
         <div>
           <div className="user">
-            {props.review.user}
+            {props.review.customer.customer_name}
           </div>
           <div className="date">
             {modifiedDate}

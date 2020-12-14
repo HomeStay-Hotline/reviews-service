@@ -24,7 +24,7 @@ const Review = (props) => {
           </div>
           <div>
             <div className="user">
-              {props.review.user}
+              {props.review.customer.customer_name}
             </div>
             <div className="date">
               {modifiedDate}
@@ -40,11 +40,11 @@ const Review = (props) => {
     <div className="review">
       <div className="reviewTop">
         <div>
-          <img src={props.review.url} className="avatar" key={props.key} />
+          <img src={props.review.customer.photo_url} className="avatar" key={props.key} />
         </div>
         <div>
           <div className="user">
-            {props.review.user}
+            {props.review.customer.customer_name}
           </div>
           <div className="date">
             {modifiedDate}

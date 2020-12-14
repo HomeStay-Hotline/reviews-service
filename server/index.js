@@ -1,13 +1,13 @@
+require('newrelic');
 const express = require('express');
 
 const app = express();
 const port = 8080;
 const parser = require('body-parser');
 const {Review, Customer} = require('./database/index.js');
-const morgan = require('morgan');
+const bodyparser = parser.json();
+// const urlencodedParser = parser.urlencoded({ extended: false });
 
-app.use(parser.json());
-app.use(morgan('dev'));
 
 app.use('/:id', express.static('public'));
 
@@ -23,39 +23,39 @@ app.get('/api/homes/:id/reviews', (req, res) => {
       res.send(data);
     })
     .catch((err) => {
+      console.log('err at server from getting info back from db: ', err);
       res.send(err);
     })
-  // const queryString = 'SELECT * FROM reviews WHERE reviews.listing_id = ?';
-  // const queryArgs = [id];
-  // db.connection.query(queryString, queryArgs, (err, response) => {
-  //   if (err) {
-  //     console.log(err);
-  //     res.sendStatus(500);
-  //   } else {
-  //     res.send(response);
-  //   }
-  // });
 });
 
 // // Create / POST - create a new review with an existing user
-// app.post('/api/homes/:id/reviews', (req, res) => {
-//   const { id } = req.params;
-//   const body = req.body
-//   console.log('body', body);
-//   const queryString = 'INSERT INTO reviews SET ?';
-//   body.listing_id = id;
-//   body.review_date = new Date().toISOString().slice(0, 19).replace('T', ' ');
-//   const queryArgs = body;
-//   console.log('queryArgs: ', queryArgs);
-//   db.connection.query(queryString, queryArgs, (err, response) => {
-//     if (err) {
-//       console.log(err);
-//       res.sendStatus(err);
-//     } else {
-//       res.send(response);
-//     }
-//   });
-// })
+app.post('/api/homes/:id/reviews', bodyparser, (req, res) => {
+  const body = req.body
+  // console.log('body', body);
+  console.log('req', req);
+  Review.create(body)
+  .then(() => {
+    res.status(201).send('created');
+  })
+  .catch((err) => {
+    res.send(err);
+  })
+})
+
+/* body sample:
+{
+    "listing_id": 12967,
+    "customer_id": 434343,
+    "review": "inserted a new test",
+    "review_date": "test",
+    "cleanliness": 2.2,
+    "communication": 2.2,
+    "check_in": 2.2,
+    "accuracy": 2.2,
+    "location_review": 2.2,
+    "value_review": 2.2
+}
+*/
 
 // // Update / PUT - update an existing review
 // app.put('/api/homes/:id/reviews', (req, res) => {
