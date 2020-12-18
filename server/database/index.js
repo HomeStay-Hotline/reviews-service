@@ -1,18 +1,21 @@
 const { Sequelize, DataTypes } = require('sequelize');
+// const {u, p, h} = require('./login.js');
+// var1 u, var2 p, var3 host
 
-const sequelize = new Sequelize('reviews', 'yingguo', null, {
-    host: 'localhost',
-    dialect: 'postgres'
+const sequelize = new Sequelize('reviews', process.env.VAR1, process.env.VAR2, {
+    host: process.env.VAR3,
+    dialect: 'postgres',
+    logging: false
 });
 
-const start = async function() {
-    try {
-        await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
-      } catch (error) {
-        console.error('Unable to connect to the database:', error);
-    }
-}
+// const start = async function() {
+//     try {
+//         await sequelize.authenticate();
+//         console.log('Connection has been established successfully.');
+//       } catch (error) {
+//         console.error('Unable to connect to the database:', error);
+//     }
+// }
 
 // start();
 

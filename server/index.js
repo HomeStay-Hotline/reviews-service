@@ -1,4 +1,4 @@
-// require('newrelic');
+require('newrelic');
 const express = require('express');
 
 const app = express();
@@ -6,6 +6,10 @@ const port = 8080;
 const parser = require('body-parser');
 const {Review, Customer} = require('./database/index.js');
 const bodyparser = parser.json();
+
+app.get(`/${process.env.VAR4}`, (req, res) => {
+  res.send(`${process.env.VAR4}`);
+})
 
 app.use('/:id', express.static('public'));
 
