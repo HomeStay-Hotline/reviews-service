@@ -9,11 +9,11 @@ const stream = fs.createWriteStream(filename);
 
 const randomInt = () => Math.floor(Math.random() * 100);
 
-const generateCustomerRecord = () => {
+const generateCustomerRecord = (id) => {
     const customer_name = faker.name.findName();
     const photo_url = `${s3URL}${randomInt().toString().padStart(3, '0')}.jpg`;
 
-    return `${customer_name},${photo_url}\n`
+    return `${id},${customer_name},${photo_url}\n`
 };
 
 const startWriting = (writeStream, encoding, done) => {
@@ -22,7 +22,7 @@ const startWriting = (writeStream, encoding, done) => {
       let canWrite = true
       do {
         i--
-        let record = generateCustomerRecord()
+        let record = generateCustomerRecord(lines - i)
         if(i === 0){
           writeStream.write(record, encoding, done)
         }else{
@@ -36,7 +36,7 @@ const startWriting = (writeStream, encoding, done) => {
     writing()
 }
   
-stream.write(`customer_name,photo_url\n`, 'utf-8')
+stream.write(`id,customer_name,photo_url\n`, 'utf-8')
 startWriting(stream, 'utf-8', () => {
 stream.end()
 })

@@ -41,7 +41,7 @@ const startWriting = (writeStream, encoding, done) => {
       do {
         i--
         // loop , use i as listing_id, 
-        const getRandomReviewAmount = Math.floor(Math.random() * 10) + 2;
+        const getRandomReviewAmount = Math.floor(Math.random() * 5) + 2;
         for (let j = 0; j < getRandomReviewAmount; j++) {
           let record = generateReview(i + 1);
           if(i === 0){
