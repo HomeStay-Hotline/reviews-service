@@ -23,7 +23,6 @@ class App extends React.Component {
     const win = window.location.pathname.split('/')[1];
     axios.get(`/api/homes/${win}/reviews`)
       .then((response) => {
-        console.log('response', response);
         this.setState({
           reviews: response.data,
         });
