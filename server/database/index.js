@@ -1,33 +1,33 @@
-// const { Sequelize, DataTypes } = require('sequelize');
-// const {u, p, h} = require('./login.js');
-// var1 u, var2 p, var3 host
-const pg = require('pg');
-const Pool = require('pg').Pool;
+const { Pool } = require('pg');
 
-let config = {
+const config = {
   host: process.env.VAR3,
   port: '5432',
   user: process.env.VAR1,
   database: 'reviews',
   max: 10, // was 20
-  password: process.env.VAR2
-}
+  password: process.env.VAR2,
+};
 
 const pool = new Pool(config);
 
 const getAllInfo = (id, callback) => {
-  let sqlString = 'SELECT * FROM reviews, customers WHERE reviews.customer_id = customers.id AND reviews.listing_id = $1';
+  const sqlString = 'SELECT * FROM reviews, customers WHERE reviews.customer_id = customers.id AND reviews.listing_id = $1';
   pool.query(sqlString, [id], (error, results) => {
     if (error) {
       return callback(error);
     }
     return callback(error, results.rows);
-  })
-}
+  });
+};
 
-module.exports = { getAllInfo }
+module.exports = { getAllInfo };
 
-////////below is sequelize version
+/// Below is sequelize version.
+// const { Sequelize, DataTypes } = require('sequelize');
+// const {u, p, h} = require('./login.js');
+// var1 u, var2 p, var3 host
+
 // const sequelize = new Sequelize('reviews', process.env.VAR1, process.env.VAR2, {
 //     host: process.env.VAR3,
 //     dialect: 'postgres',
