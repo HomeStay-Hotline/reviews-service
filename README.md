@@ -24,7 +24,12 @@ Install dependencies
 ```sh
 $ npm install
 ```
-To start this project, you can pass in database host, database user and password as environment variable as you run this application
+Run following script to buid webpack bundle.
+```sh
+npm run build
+```
+
+To start this project, you can pass in database host, database user and password as environment variable as you run server
 
 VAR1 => database username
 
@@ -32,12 +37,10 @@ VAR2 => database password
 
 VAR3 => database host
 
-Run following script to buid webpack bundle and run server.
 ```sh
-npm run build
 npm start
 ```
 
 ## API:
-GET request: Select all reviews that associated with the given listing id
+GET request: Select all reviews that are associated with the given listing id
 Endpoint: '/api/homes/:id/reviews'
