@@ -1,6 +1,5 @@
-# HomeStay Hotline/Reviews-service Backend Project
+# HomeStay Hotline/Reviews-service
 
-## Goal
 HomeStay Hotline is an open-source accomadation booking application designed with service oriented architecture. This project is especially for the review service component and the goal of this project is to build a new back end for the review service component to handle production level traffic. I inherited a legacy code base, which had a fully working front end. Initially, it could only handle 350 request per second after deployed. I started with a project scope, then reshaped database schema, benchmarked databases, performed local stress testing and cloud-based stress testing. By observing the performance during testing, I identified and solved bottlenecks. As a result, it can handle 1300 request per second when deployed, which is about 370% higher then original throughput. That means more users can interact with the application at the same time without waiting, which improved user experience. 
 
 ## Related Projects
