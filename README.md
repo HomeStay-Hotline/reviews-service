@@ -25,8 +25,11 @@ Install dependencies
 $ npm install
 ```
 To start this project, you can pass in database host, database user and password as environment variable as you run this application
+
 VAR1 => database username
+
 VAR2 => database password
+
 VAR3 => database host
 
 Run following script to buid webpack bundle and run server.
