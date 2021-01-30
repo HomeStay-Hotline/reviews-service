@@ -1,10 +1,11 @@
 # HomeStay Hotline/Reviews-service Backend Project
 
 ## Goal
-HomeStay Hotline is an open-source room reservation app designed with service oriented architecture in mind. The review service component is responsible presenting customer reviews for each listing. This project is based on a legacy code base. It original could only handle 350 request per second after deployed . So my goal is to optimize performance in order to handle spike in product level traffic and maintain the same front end user interface. I re-did the backend code and achieved 1300 request per second after deployed, which is about 370% higher then original. 
+HomeStay Hotline is an open-source accomadation booking app designed with service oriented architecture. The goal of this project is to build a new back end for the review service component to handle production level traffic. I inherited a legacy code base, which had a fully working front end. Initially, this component could handle 350 request per second after deployed . After I re-built the back end, it can handle 1300 request per second when deployed, which is about 370% higher then original. 
 
 ## Requirements:
 Node.js
+
 Postgres SQL
 
 ## Getting Started:
@@ -21,8 +22,6 @@ To start this project, you can pass in database host, database user and password
 VAR1 => database username
 VAR2 => database password
 VAR3 => database host
-
-Or, you can also edit esrver/database/index.js to update those database info.
 
 Run following script to buid webpack bundle and run server.
 ```sh
